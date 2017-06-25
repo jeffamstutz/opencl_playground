@@ -49,8 +49,12 @@ include_directories(
   ${OpenCL_INCLUDE_DIRS}
 )
 
-add_executable(app
-  app.cpp
-)
+# Simple app
 
-target_link_libraries(app ${OpenCL_LIBRARIES})
+add_executable(simple simple.cpp)
+target_link_libraries(simple ${OpenCL_LIBRARIES})
+
+# Mandelbrot app
+
+add_executable(mandelbrot mandelbrot.cpp)
+target_link_libraries(mandelbrot ${OpenCL_LIBRARIES})

@@ -110,9 +110,9 @@ int main()
 #endif
 
   cl::Kernel kernel_add(program, "simple_add");
-  kernel_add.setArg(0,buffer_A);
-  kernel_add.setArg(1,buffer_B);
-  kernel_add.setArg(2,buffer_C);
+  kernel_add.setArg(0, buffer_A);
+  kernel_add.setArg(1, buffer_B);
+  kernel_add.setArg(2, buffer_C);
   queue.enqueueNDRangeKernel(kernel_add,
                              cl::NullRange,
                              cl::NDRange(10),
@@ -126,7 +126,7 @@ int main()
   std::cout<<" result: \n";
 
   for(int i = 0; i < 10; i++)
-    std::cout<< C[i]<< " ";
+    std::cout << C[i] << " ";
 
   std::cout << '\n';
 
